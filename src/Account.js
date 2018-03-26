@@ -4,7 +4,7 @@ function Account() {
 }
 
 Account.prototype.deposit = function deposit(amount) {
-  let movDate = new Date();
+  const movDate = new Date();
 
   this.balance += amount;
 
@@ -14,4 +14,8 @@ Account.prototype.deposit = function deposit(amount) {
     debit: '',
     balance: this.balance,
   });
+};
+
+Account.prototype.withdraw = function withdraw(amount) {
+  this.balance -= amount;
 };

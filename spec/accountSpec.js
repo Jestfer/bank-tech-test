@@ -32,4 +32,16 @@ describe('Account', () => {
       ]);
     });
   });
+
+  describe('#withdraw', () => {
+    beforeEach(() => {
+      account.deposit(1000);
+    });
+
+    it('it should update balance after customer withdraws money', () => {
+      account.withdraw(600);
+
+      expect(account.balance).toEqual(400);
+    });
+  });
 });
