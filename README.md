@@ -50,7 +50,7 @@ Everything required to run Jasmine is within the lib folder. You just need to op
 [TBC]
 
 ## Technologies used
-* ESLint
+* ESLint (Airbnb style guide)
 * HTML
 * Jasmine
 * Javascript

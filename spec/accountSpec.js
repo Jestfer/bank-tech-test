@@ -1,4 +1,4 @@
-describe('Account', () => {
+describe('account', () => {
   let account;
 
   beforeEach(() => {
