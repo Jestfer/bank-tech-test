@@ -16,7 +16,7 @@ StatementPrinter.prototype.printHeaders = function printHeaders() {
 };
 
 StatementPrinter.prototype.getHistory = function getHistory() {
-  const transactionData = `${this.accHistory.date} || ${this.accHistory.credit.toString()} || ${this.accHistory.debit.toString()} || ${this.accHistory.balance.toString()}`;
-  console.log(transactionData);
-  return transactionData;
+  this.accHistory.forEach((transaction) => {
+    console.log(`${transaction.date} || ${transaction.credit.toString()} || ${transaction.debit.toString()} || ${transaction.balance.toString()}`);
+  });
 };

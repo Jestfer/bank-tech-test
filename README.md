@@ -41,6 +41,11 @@ First, I tested printing one transaction, and then several.
 ## Edge Cases:
 * Customer can not withdraw more money than is available in the current account.
 
+## Next focus:
+* If I had time, I would have liked to also create a private function in the Account class. Something like **trackMovement** to process the data that is going to be pushed into the history per the given transaction.
+* I would have liked to spend some more time on refactoring and thinking about other edge cases, like raising an exception if the amount passed is NaN.
+* Finally, test coverage would have been nice as well.
+
 ## How to run
 To run this app, just open ```index.html``` in your browser.
 
