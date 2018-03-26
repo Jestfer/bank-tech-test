@@ -21,4 +21,14 @@ I want to be able to print a statement (date, amount, balance)
 
 ## My approach
 
+#### Pre-code:
+* I set up the project using ESLint from the beginning for best practices purposes. Also, I decided to follow the Airbnb style guide for the same reason.
+* Next, I diagrammed the different classes and methods needed for this project following the Domain Modelling approach.
+
+Regarding the development process, I tried to stick to this flow as much as possible:
+* Unit Tests
+* Implementation
+* Refactoring
+
+#### Development:
 [TBC]
