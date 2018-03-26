@@ -17,7 +17,7 @@ describe('statementPrinter', () => {
 
   describe('#initialize', () => {
     it('it should take an account history object', () => {
-      expect(statement.data).toEqual({
+      expect(statement.accHistory).toEqual({
         date: '26/3/2018',
         credit: 1000,
         debit: '-',
@@ -27,8 +27,10 @@ describe('statementPrinter', () => {
   });
 
   describe('#printStatement', () => {
+    const deposit = '26/3/2018 || 1000 || - || 1000';
+
     it('it should print the statement of the given account history', () => {
-      expect(statement.printStatement()).toEqual('date: 26/3/2018 || credit: 1000 || debit: - || balance: 1000');
+      expect(statement.printStatement()).toEqual(deposit);
     });
   });
 });

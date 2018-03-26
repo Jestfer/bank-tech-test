@@ -14,6 +14,8 @@ Account.prototype.deposit = function deposit(amount) {
     debit: '-',
     balance: this.balance,
   });
+
+  return true;
 };
 
 Account.prototype.withdraw = function withdraw(amount) {
@@ -29,6 +31,8 @@ Account.prototype.withdraw = function withdraw(amount) {
     debit: amount,
     balance: this.balance,
   });
+
+  return true;
 };
 
 // PRIVATE
@@ -38,3 +42,5 @@ Account.prototype.checkFunds = function checkFunds(amount) {
     throw new Error('Insufficient funds. Why not opening a Premium Account?');
   }
 };
+
+// track movement

@@ -1,7 +1,22 @@
 function StatementPrinter(accHistory) {
-  this.data = accHistory;
+  this.accHistory = accHistory;
 }
 
 StatementPrinter.prototype.printStatement = function printStatement() {
-  return `date: ${this.data.date} || credit: ${this.data.credit.toString()} || debit: ${this.data.debit} || balance: ${this.data.balance.toString()}`;
+  this.printHeaders();
+  return this.getHistory();
+};
+
+// PRIVATE
+
+StatementPrinter.prototype.printHeaders = function printHeaders() {
+  const headers = 'date || credit || debit || balance';
+  console.log('date || credit || debit || balance');
+  return headers;
+};
+
+StatementPrinter.prototype.getHistory = function getHistory() {
+  const transactionData = `${this.accHistory.date} || ${this.accHistory.credit.toString()} || ${this.accHistory.debit.toString()} || ${this.accHistory.balance.toString()}`;
+  console.log(transactionData);
+  return transactionData;
 };
