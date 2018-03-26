@@ -53,7 +53,10 @@ To run this app, just open ```index.html``` in your browser.
 Everything required to run Jasmine is within the lib folder. You just need to open ```SpecRunner.html``` in your browser to run the tests.
 
 ## Screenshots
+* Account
 ![Account](/images/account.png?raw=true)
+
+* Statement
 ![Statement](/images/statement.png?raw=true)
 
 ## Technologies used
