@@ -21,5 +21,15 @@ describe('Account', () => {
 
       expect(account.balance).toEqual(1000);
     });
+
+    it('it should reflect account movement in history', () => {
+      account.deposit(1000);
+
+      expect(account.history).toEqual([
+        {
+          date: '26/03/2018', credit: 1000, debit: '', balance: 1000,
+        },
+      ]);
+    });
   });
 });
