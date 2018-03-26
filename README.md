@@ -31,4 +31,26 @@ Regarding the development process, I tried to stick to this flow as much as poss
 * Refactoring
 
 #### Development:
+1. I started by testing initialize properties for the Account class, making sure the infrastructure was correctly set up.
+Then, I worked on the following features for the Account class, to make sure that a customer can: deposit money and withdraw money. Always making sure I was doing TDD.
+
+2. [TBC]
+
+
+## Edge Cases:
+* Customer can not withdraw more money than is available in the current account.
+
+## How to run
+To run this app, just open ```index.html``` in your browser.
+
+## How to run the tests
+Everything required to run Jasmine is within the lib folder. You just need to open ```SpecRunner.html``` in your browser to run the tests.
+
+## Screenshots
 [TBC]
+
+## Technologies used
+* ESLint
+* HTML
+* Jasmine
+* Javascript
