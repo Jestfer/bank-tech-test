@@ -29,7 +29,7 @@ describe('account', () => {
         {
           date: '26/3/2018',
           credit: 1000,
-          debit: '',
+          debit: '-',
           balance: 1000,
         },
       ]);
@@ -53,7 +53,7 @@ describe('account', () => {
       expect(account.history).toEqual([
         {
           date: '26/3/2018',
-          credit: '',
+          credit: '-',
           debit: 600,
           balance: 400,
         },

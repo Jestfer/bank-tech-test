@@ -11,7 +11,7 @@ Account.prototype.deposit = function deposit(amount) {
   this.history.push({
     date: (`${movDate.getDate()}/${movDate.getMonth() + 1}/${movDate.getFullYear()}`),
     credit: amount,
-    debit: '',
+    debit: '-',
     balance: this.balance,
   });
 };
@@ -25,7 +25,7 @@ Account.prototype.withdraw = function withdraw(amount) {
 
   this.history.push({
     date: (`${movDate.getDate()}/${movDate.getMonth() + 1}/${movDate.getFullYear()}`),
-    credit: '',
+    credit: '-',
     debit: amount,
     balance: this.balance,
   });

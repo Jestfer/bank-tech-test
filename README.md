@@ -34,8 +34,9 @@ Regarding the development process, I tried to stick to this flow as much as poss
 1. I started by testing initialize properties for the Account class, making sure the infrastructure was correctly set up.
 Then, I worked on the following features for the Account class, to make sure that a customer can: deposit money and withdraw money. Always making sure I was doing TDD.
 
-2. [TBC]
-
+2. Then, I created a statementPrinter class that takes the history of one account and set it as a property of the new class.
+Finally, its only method is in charge of printing the statement information for the customer.
+First, I tested printing one transaction, and then several.
 
 ## Edge Cases:
 * Customer can not withdraw more money than is available in the current account.

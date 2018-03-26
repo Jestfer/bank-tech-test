@@ -8,11 +8,11 @@ describe('statementPrinter', () => {
     account.history = {
       date: '26/3/2018',
       credit: 1000,
-      debit: '',
+      debit: '-',
       balance: 1000,
     };
 
-    statement = new statementPrinter(account.history);
+    statement = new StatementPrinter(account.history);
   });
 
   describe('#initialize', () => {
@@ -20,9 +20,15 @@ describe('statementPrinter', () => {
       expect(statement.data).toEqual({
         date: '26/3/2018',
         credit: 1000,
-        debit: '',
+        debit: '-',
         balance: 1000,
       });
+    });
+  });
+
+  describe('#printStatement', () => {
+    it('it should print the statement of the given account history', () => {
+      expect(statement.printStatement()).toEqual('date: 26/3/2018 || credit: 1000 || debit: - || balance: 1000');
     });
   });
 });
