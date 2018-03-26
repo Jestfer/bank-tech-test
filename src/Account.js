@@ -19,6 +19,10 @@ Account.prototype.deposit = function deposit(amount) {
 Account.prototype.withdraw = function withdraw(amount) {
   const movDate = new Date();
 
+  if (amount > this.balance) {
+    throw new Error('Insufficient funds. Why not opening a Premium Account?');
+  }
+
   this.balance -= amount;
 
   this.history.push({

@@ -59,5 +59,9 @@ describe('Account', () => {
         },
       ]);
     });
+
+    it('it should raise an error if insufficient funds', () => {
+      expect(() => { account.withdraw(1100); }).toThrowError('Insufficient funds. Why not opening a Premium Account?');
+    });
   });
 });
