@@ -27,7 +27,10 @@ describe('Account', () => {
 
       expect(account.history).toEqual([
         {
-          date: '26/03/2018', credit: 1000, debit: '', balance: 1000,
+          date: '26/03/2018',
+          credit: 1000,
+          debit: '',
+          balance: 1000,
         },
       ]);
     });
@@ -35,13 +38,26 @@ describe('Account', () => {
 
   describe('#withdraw', () => {
     beforeEach(() => {
-      account.deposit(1000);
+      account.balance = 1000;
     });
 
     it('it should update balance after customer withdraws money', () => {
       account.withdraw(600);
 
       expect(account.balance).toEqual(400);
+    });
+
+    it('it should reflect account movement in history', () => {
+      account.withdraw(600);
+
+      expect(account.history).toEqual([
+        {
+          date: '26/03/2018',
+          credit: '',
+          debit: 600,
+          balance: 400,
+        },
+      ]);
     });
   });
 });

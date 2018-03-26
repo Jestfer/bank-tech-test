@@ -17,5 +17,14 @@ Account.prototype.deposit = function deposit(amount) {
 };
 
 Account.prototype.withdraw = function withdraw(amount) {
+  const movDate = new Date();
+
   this.balance -= amount;
+
+  this.history.push({
+    date: (`${movDate.getDate()}/0${movDate.getMonth() + 1}/${movDate.getFullYear()}`),
+    credit: '',
+    debit: amount,
+    balance: this.balance,
+  });
 };
