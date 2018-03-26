@@ -4,7 +4,7 @@ function StatementPrinter(accHistory) {
 
 StatementPrinter.prototype.printStatement = function printStatement() {
   this.printHeaders();
-  return this.getHistory();
+  this.getHistory();
 };
 
 // PRIVATE

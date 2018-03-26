@@ -32,7 +32,7 @@ Regarding the development process, I tried to stick to this flow as much as poss
 
 #### Development:
 1. I started by testing initialize properties for the Account class, making sure the infrastructure was correctly set up.
-Then, I worked on the following features for the Account class, to make sure that a customer can: deposit money and withdraw money. Always making sure I was doing TDD.
+Then, I worked on the following features for the Account class to make sure that a customer can: deposit money and withdraw money. Always making sure I was doing TDD.
 
 2. Then, I created a statementPrinter class that takes the history of one account and set it as a property of the new class.
 Finally, its only method is in charge of printing the statement information for the customer.
@@ -53,7 +53,8 @@ To run this app, just open ```index.html``` in your browser.
 Everything required to run Jasmine is within the lib folder. You just need to open ```SpecRunner.html``` in your browser to run the tests.
 
 ## Screenshots
-[TBC]
+![Account](/images/account.png?raw=true)
+![Statement](/images/statement.png?raw=true)
 
 ## Technologies used
 * ESLint (Airbnb style guide)

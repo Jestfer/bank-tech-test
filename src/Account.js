@@ -36,11 +36,10 @@ Account.prototype.withdraw = function withdraw(amount) {
 };
 
 // PRIVATE
+// TODO: 'trackMovement' func to delegate history data in transaction
 
 Account.prototype.checkFunds = function checkFunds(amount) {
   if (amount > this.balance) {
     throw new Error('Insufficient funds. Why not opening a Premium Account?');
   }
 };
-
-// track movement
