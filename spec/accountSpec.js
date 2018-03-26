@@ -14,4 +14,12 @@ describe('Account', () => {
       expect(account.history).toEqual([]);
     });
   });
+
+  describe('#deposit', () => {
+    it('it should update balance after customer deposits money', () => {
+      account.deposit(1000);
+
+      expect(account.balance).toEqual(1000);
+    });
+  });
 });
